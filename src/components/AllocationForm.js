@@ -95,7 +95,8 @@ const AllocationForm = (props) => {
               </option>
             </select>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 items-center">
+          <span className="text-2xl text-sky-400">£</span>
             <input
               required="required"
               type="number"
