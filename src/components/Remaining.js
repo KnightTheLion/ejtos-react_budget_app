@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 
 const Remaining = () => {
-  const { expenses, budget } = useContext(AppContext);
+  const { expenses, budget, currency } = useContext(AppContext);
   const totalExpenses = expenses.reduce((total, item) => {
     return (total += item.cost);
   }, 0);
@@ -10,7 +10,7 @@ const Remaining = () => {
     totalExpenses > budget - 0.000001 ? "bg-red-400" : "bg-emerald-500";
   return (
     <div className={`h-[75px] flex px-4 items-center rounded-md ${alertType}`}>
-      <span className="text-white">Remaining: £ {budget - totalExpenses}</span>
+      <span className="text-white">Remaining: {currency} {budget - totalExpenses}</span>
     </div>
   );
 };
