@@ -6,10 +6,11 @@ const Remaining = () => {
   const totalExpenses = expenses.reduce((total, item) => {
     return (total += item.cost);
   }, 0);
-  const alertType = totalExpenses > budget ? "alert-danger" : "alert-success";
+  const alertType =
+    totalExpenses > budget - 0.000001 ? "bg-red-400" : "bg-emerald-500";
   return (
-    <div className={`alert ${alertType}`}>
-      <span>Remaining £{budget - totalExpenses}</span>
+    <div className={`h-[75px] flex px-4 items-center rounded-md ${alertType}`}>
+      <span className="text-white">Remaining: £ {budget - totalExpenses}</span>
     </div>
   );
 };

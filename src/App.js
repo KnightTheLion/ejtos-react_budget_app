@@ -11,28 +11,31 @@ import RemainingBudget from "./components/Remaining";
 const App = () => {
   return (
     <AppProvider>
-      <div className="container">
-        <h1 className="mt-3">Company's Budget Allocation</h1>
-        <div className="row mt-3">
-          <div className="col-sm">
+      <div className="grid gril-flow-col items-center justify-center h-screen w-full antialiased text-white bg-gradient-to-r from-indigo-950 via-blue-900 to-black px-24">
+        <h1 className="mt-12 text-5xl text-center text-sky-400 drop-shadow-2xl uppercase font-semibold">
+          Company's Budget Allocation
+        </h1>
+        <div className="grid grid-cols-3 mt-4 items-center gap-4 justify-evenly w-[1000px]">
+          <div>
             <Budget />
           </div>
-          <div className="col-sm">
+          <div>
             <RemainingBudget />
           </div>
-          <div className="col-sm">
+          <div>
             <ExpenseTotal />
           </div>
         </div>
-        <h3 className="mt-3">Allocation</h3>
-        <div className="row ">
-          <div className="col-sm">
+        <h3 className="text-3xl">Allocation</h3>
+        <div>
+          <div>
             <ExpenseList />
           </div>
         </div>
-        <h3 className="mt-3">Change allocation</h3>
-        <div className="row mt-3">
-          <div className="col-sm">
+        <div className="grid grid-rows-2 ">
+          <h3 className="text-3xl ">Change Allocation</h3>
+
+          <div>
             <AllocationForm />
           </div>
         </div>
