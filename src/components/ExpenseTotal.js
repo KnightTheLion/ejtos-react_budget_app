@@ -8,7 +8,9 @@ const ExpenseTotal = () => {
   }, 0);
   return (
     <div className="h-[75px] flex items-center bg-blue-950 rounded-md px-4 text-sky-400">
-      <span>Spent so far: {currency} {totalExpenses}</span>
+      <span>
+        Spent so far: {currency} {totalExpenses}
+      </span>
     </div>
   );
 };
