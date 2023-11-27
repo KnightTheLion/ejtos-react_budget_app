@@ -12,7 +12,7 @@ const App = () => {
     const [currency, setCurrency] = useState('')
   return (
     <AppProvider>
-      <div className="grid gril-flow-col items-center justify-center h-screen w-full antialiased text-white bg-gradient-to-r from-indigo-950 via-blue-900 to-black px-24">
+      <div className="grid grid-flow-row items-center justify-center h-screen w-full antialiased text-white bg-gradient-to-r from-indigo-950 via-blue-900 to-black px-24">
         <h1 className="mt-12 text-5xl text-center text-sky-400 drop-shadow-2xl uppercase font-semibold">
           Company's Budget Allocation
         </h1>
@@ -42,7 +42,7 @@ const App = () => {
               id="inputGroupSelect03"
               onChange={(event) => setCurrency(event.target.value)}
             >
-              <option defaultValue value="$ Dollar" name="Dollar">
+              <option  value="$ Dollar" name="Dollar">
                 $ Dollar
               </option>
               <option value="£ Pound" name="Pound">
